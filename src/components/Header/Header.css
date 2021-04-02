@@ -1,0 +1,52 @@
+.header {
+  border-bottom: 1px solid lightgray;
+  padding: 10px 0;
+}
+.main-nav {
+  font-size: 20px;
+  font-weight: 600;
+}
+.main-nav .navbar-brand a {
+  text-decoration: none;
+  color: #29a0b1;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: oblique;
+  text-shadow: 1px 1px #29a0b1;
+}
+.main-nav .navbar-brand a span {
+  color: #ef7c8e;
+  font-weight: 800;
+  text-shadow: 1px 1px #ef7c8e;
+}
+.main-nav-ul a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #29a0b1;
+  text-transform: capitalize;
+}
+.login-btn {
+  margin-left: 15px;
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #ef7c8e;
+  padding: 5px 15px;
+  border-radius: 5px;
+  display: inline;
+}
+
+@media (max-width: 991px) {
+  .main-nav-ul {
+    background-color: #ef7c8e;
+    margin-top: 10px;
+    padding: 15px;
+  }
+  .main-nav-ul a {
+    margin-left: 0px;
+    color: #fae8e0;
+  }
+  .main-nav-ul a:hover {
+    color: #b6e2d3;
+  }
+}

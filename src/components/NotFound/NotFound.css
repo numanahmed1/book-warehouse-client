@@ -1,0 +1,9 @@
+.not-found {
+  min-height: 91vh;
+  background-color: #167d7f;
+  color: #ddffe7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

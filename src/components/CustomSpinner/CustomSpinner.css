@@ -1,0 +1,9 @@
+.spinner {
+  min-height: 91vh;
+  color: #167d7f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}

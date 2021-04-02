@@ -1,0 +1,79 @@
+.admin-to-front {
+  background-color: #ef7c8e;
+  width: 20%;
+  padding: 20px;
+}
+.visit-btn {
+  margin-left: 10px;
+  width: 100%;
+  border: 1px solid #fae8e0;
+  background-color: #167d7f;
+}
+.visit-btn:hover {
+  border-color: #167d7f;
+  background-color: #fae8e0;
+}
+.visit-btn a {
+  color: #fae8e0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+.visit-btn:hover a {
+  color: #167d7f;
+}
+.admin-main {
+  display: flex;
+  flex-direction: row;
+}
+.admin-left {
+  flex: 0.2;
+  background-color: #ef7c8e;
+  min-height: 100vh;
+}
+.admin-left h1 {
+  color: #fae8e0;
+  font-size: 35px;
+  font-weight: 600;
+  padding-left: 30px;
+}
+.admin-right {
+  flex: 0.8;
+  margin-top: -55px;
+}
+.v-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.v-nav a {
+  color: #fae8e0;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.admin-icon {
+  color: #167d7f;
+  font-size: 22px;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .admin-main {
+    flex-direction: column;
+  }
+  .admin-left {
+    flex: 1;
+    min-height: 200px;
+    text-align: center;
+  }
+  .admin-right {
+    flex: 1;
+    margin-top: 10px;
+  }
+  .admin-to-front {
+    width: 100%;
+    padding: 20px;
+  }
+}
