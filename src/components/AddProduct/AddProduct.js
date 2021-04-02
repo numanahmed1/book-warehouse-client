@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
@@ -14,11 +14,15 @@ const AddProduct = () => {
     imageData.set("key", "768b893f9ca0508d850dc134cfaf865b");
     imageData.set("image", event.target.files[0]);
 
+    if (imageUrl === "") {
+      document.getElementById("loading").style.display = "inline";
+    }
+
     axios
       .post("https://api.imgbb.com/1/upload", imageData)
       .then(function (response) {
         setImageUrl(response.data.data.display_url);
-        console.log(response);
+        document.getElementById("loading").style.display = "none";
       })
       .catch(function (error) {
         console.log(error);
@@ -49,7 +53,7 @@ const AddProduct = () => {
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="row mb-2">
-          <div className="col-md-6 col-lg-6">
+          <div className="col-md-6 col-lg-6 mt-3">
             <label htmlFor="name">Product Name</label>
             <input
               className="form-control"
@@ -58,7 +62,7 @@ const AddProduct = () => {
             />
             {errors.name && <p>Product name is required</p>}
           </div>
-          <div className="col-md-6 col-lg-6">
+          <div className="col-md-6 col-lg-6 mt-3">
             <label htmlFor="author">Author Name</label>
             <input
               className="form-control"
@@ -67,7 +71,7 @@ const AddProduct = () => {
             />
             {errors.author && <p>Author name is required</p>}
           </div>
-          <div className="col-md-6 col-lg-6">
+          <div className="col-md-6 col-lg-6 mt-3">
             <label htmlFor="price">Price</label>
             <input
               className="form-control"
@@ -76,15 +80,21 @@ const AddProduct = () => {
             />
             {errors.price && <p> Price is required</p>}
           </div>
-          <div className="col-md-6 col-lg-6">
-            <label htmlFor="name">Upload image</label>
+          <div className="col-md-6 col-lg-6 mt-3">
+            <label className="d-block" htmlFor="name">
+              Upload image
+            </label>
             <input
-              className="d-block"
+              className="img-upload"
               name="image"
               type="file"
               onChange={handleImgUpload}
               ref={register({ required: true })}
             />
+
+            <span id="loading">
+              <Spinner animation="grow" />
+            </span>
             {errors.image && <p>Image upload is required</p>}
           </div>
         </div>

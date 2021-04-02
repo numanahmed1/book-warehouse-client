@@ -7,7 +7,6 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    console.log(loggedInUser.email);
     const url = `https://secret-falls-84464.herokuapp.com/orders?email=${loggedInUser.email}`;
     fetch(url)
       .then((res) => res.json())

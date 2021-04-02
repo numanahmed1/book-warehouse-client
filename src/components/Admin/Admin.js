@@ -10,6 +10,7 @@ import {
   faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Admin.css";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Admin = () => {
   return (
@@ -48,18 +49,18 @@ const Admin = () => {
 
           <div className="admin-right">
             <Switch>
-              <Route path="/admin">
+              <PrivateRoute path="/admin">
                 <ManageProduct />
-              </Route>
-              <Route path="/manage-product">
+              </PrivateRoute>
+              <PrivateRoute path="/manage-product">
                 <ManageProduct />
-              </Route>
-              <Route path="/add-product">
+              </PrivateRoute>
+              <PrivateRoute path="/add-product">
                 <AddProduct />
-              </Route>
-              <Route path="/edit-product">
+              </PrivateRoute>
+              <PrivateRoute path="/edit-product">
                 <EditProduct />
-              </Route>
+              </PrivateRoute>
             </Switch>
           </div>
         </Router>
