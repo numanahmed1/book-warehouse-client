@@ -16,9 +16,9 @@ const Admin = () => {
   return (
     <div className="admin">
       <div className="admin-to-front">
-        <button className="visit-btn">
-          <Link to="/">Visit Site</Link>
-        </button>
+        <Link to="/">
+          <button className="visit-btn">Visit Site</button>
+        </Link>
       </div>
       <div className="admin-main">
         <Router>

@@ -8,18 +8,13 @@
   width: 100%;
   border: 1px solid #fae8e0;
   background-color: #167d7f;
+  color: #fae8e0;
+  font-size: 16px;
+  font-weight: 500;
 }
 .visit-btn:hover {
   border-color: #167d7f;
   background-color: #fae8e0;
-}
-.visit-btn a {
-  color: #fae8e0;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-}
-.visit-btn:hover a {
   color: #167d7f;
 }
 .admin-main {
